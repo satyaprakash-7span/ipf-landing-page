@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'MuseoSans';
+  font-weight: 500;
+  font-display: swap;
+  src: url('~assets/fonts/MuseoSans-Medium.ttf') format('truetype');
+}

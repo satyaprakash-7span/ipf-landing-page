@@ -7,11 +7,12 @@
     >
       <div
         v-show="showMobileMenu"
-        class="absolute right-0 block h-auto pb-10 mt-1 bg-green-500 shadow  sm:block md:block lg:hidden w-72 sm:w-72 md:w-full"
+        :class="[{ '': active }, '-right-1']"
+        class="absolute right-0 block h-auto pb-10 bg-green-500 shadow  sm:block md:block lg:hidden w-72 sm:w-72 md:w-full"
       >
-        <ul class="text-sm font-normal text-left text-white">
+        <ul class="text-lg font-medium text-left text-white">
           <li
-            class="flex items-center justify-between py-4 pl-3 text-white transition-all duration-500 cursor-pointer  hover:bg-green-400 hover:text-white"
+            class="flex items-center justify-between h-16 pl-3 text-white transition-all duration-500 cursor-pointer  hover:bg-green-400 hover:text-white"
           >
             <span>Our Vision</span>
             <ChevronRightIcon class="w-5 h-5 mr-1 text-white" />
@@ -57,13 +58,15 @@
           </li>
 
           <li
-            class="flex items-center justify-between px-3 py-4 pl-3 text-white border border-white cursor-pointer  hover:text-white"
+            class="flex items-center justify-between px-3 py-4 pl-3 text-base font-normal text-white border border-white cursor-pointer  hover:text-white"
           >
             My Account
             <button
-              class="flex items-center px-4 py-2 bg-transparent border border-white rounded-md  group hover:border-white hover:bg-green-400 hover:text-white"
+              class="flex items-center px-4 py-2 text-base font-normal bg-transparent border border-white rounded-md  group hover:border-white hover:bg-white hover:bg-opacity-30 hover:text-white hover:text-blue-400"
             >
-              <user-icon class="w-4 h-4 mr-2 -ml-1 hover:text-white" />
+              <user-icon
+                class="w-4 h-4 mr-2 -ml-1 text-white hover:text-white"
+              />
               Login
             </button>
           </li>
@@ -121,6 +124,7 @@ export default {
     return {
       isMobileMenu: false,
       isAbout: false,
+      active: false,
     }
   },
 

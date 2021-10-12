@@ -2,17 +2,27 @@
   <nav
     id="nav"
     :class="[
-      { 'transparent-navbar shadow-lg z-1': active },
+      { 'transparent-navbar bg-transparent shadow-lg z-1': active },
       'fixed top-0 left-0 z-40 w-full bg-white scroll-navbar',
     ]"
   >
     <!--Dekstop Navbar block-->
-    <div class="hidden w-full px-4 pt-3 sm:hidden md:hidden lg:block">
+    <div class="hidden w-full px-4 sm:px-8 sm:hidden md:hidden lg:block">
       <!-- header contact section  -->
       <div
-        class="flex justify-center px-1 mt-3 space-x-4 sm:mt-1 sm:justify-end"
+        class="flex justify-center pt-2 pb-2 sm:justify-end 2xl:pt-4 2xl:pb-3"
       >
-        <ul class="flex items-center space-x-4 text-sm">
+        <ul
+          class="
+            2xl:text-xl
+            flex
+            font-normal
+            items-center
+            space-x-3.5
+            lg:space-x-4
+            text-base
+          "
+        >
           <li
             class="transition-all duration-500 cursor-pointer  hover:text-blue-400"
           >
@@ -41,19 +51,19 @@
       </div>
 
       <!-- border  -->
-      <div class="mt-3 mb-2 border border-b border-gray-200"></div>
+      <div class="border border-b border-gray-200"></div>
 
       <div class="px-2 sm:px-0 sm:flex sm:items-center sm:justify-between">
         <!-- Site logo  -->
-        <nuxt-link to="/" class="hidden sm:hidden md:hidden lg:block">
+        <nuxt-link to="/" class="hidden mt-1 sm:hidden md:hidden lg:block">
           <img src="../assets/images/blocks-logo.png" class="" alt="" />
         </nuxt-link>
 
-        <!-- Menu items  -->
+        <!-- dekstop Menu items  -->
         <div class="hidden sm:hidden md:hidden lg:block stroke">
           <ul
             v-if="!isSearchMenu"
-            class="flex space-x-8 text-xs font-normal text-gray-900  sm:text-sm md:text-sm text-none xl:text-base"
+            class="flex space-x-12 text-sm font-medium text-gray-900  2xl:space-x-28 lg:text-base md:text-base 2xl:text-xl text-none sm:text-base"
           >
             <li
               class="transition-all duration-500 cursor-pointer  hover:text-blue-400"
@@ -211,7 +221,7 @@
         <div class="flex items-center space-x-4">
           <button
             v-if="!isSearchMenu"
-            class="hidden px-6 py-2 text-blue-800 transition-all duration-500 bg-green-100 bg-opacity-75 rounded-md  lg:block sm:hidden md:hblock hover:bg-green-400"
+            class="hidden w-24 h-12 text-base font-medium text-blue-800 transition-all duration-500 bg-green-100 bg-opacity-75 rounded-md  lg:block sm:hidden md:hblock hover:bg-green-400"
           >
             Apply
           </button>
